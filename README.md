@@ -24,3 +24,7 @@ The release includes a low-effort, high-impact fix: cache repeated category norm
 ```bash
 PYTHONPATH=src python -m unittest discover -s tests -v
 ```
+
+## Benchmarks
+
+Use `PYTHONPATH=src python3 -m timeit -s "from perf_demo.analytics import normalize_label;" "normalize_label('  Mobile Apps  ')"` to confirm the cache is effective.
